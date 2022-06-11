@@ -48,6 +48,21 @@ public class CacheConfiguration {
             createCache(cm, co.markamber.testjhip.domain.User.class.getName());
             createCache(cm, co.markamber.testjhip.domain.Authority.class.getName());
             createCache(cm, co.markamber.testjhip.domain.User.class.getName() + ".authorities");
+            createCache(cm, co.markamber.testjhip.domain.Project.class.getName());
+            createCache(cm, co.markamber.testjhip.domain.Project.class.getName() + ".orderLineItems");
+            createCache(cm, co.markamber.testjhip.domain.OrderLineItem.class.getName());
+            createCache(cm, co.markamber.testjhip.domain.Manufacture.class.getName());
+            createCache(cm, co.markamber.testjhip.domain.Manufacture.class.getName() + ".products");
+            createCache(cm, co.markamber.testjhip.domain.Manufacture.class.getName() + ".vendors");
+            createCache(cm, co.markamber.testjhip.domain.Product.class.getName());
+            createCache(cm, co.markamber.testjhip.domain.Product.class.getName() + ".purchaseOrderLineItems");
+            createCache(cm, co.markamber.testjhip.domain.Vendor.class.getName());
+            createCache(cm, co.markamber.testjhip.domain.Vendor.class.getName() + ".manufactures");
+            createCache(cm, co.markamber.testjhip.domain.PurchaseOrder.class.getName());
+            createCache(cm, co.markamber.testjhip.domain.PurchaseOrderLineItem.class.getName());
+            createCache(cm, co.markamber.testjhip.domain.PurchaseOrderLineItem.class.getName() + ".receivedItems");
+            createCache(cm, co.markamber.testjhip.domain.PurchaseOrderLineItem.class.getName() + ".pos");
+            createCache(cm, co.markamber.testjhip.domain.ReceivedItem.class.getName());
             // jhipster-needle-ehcache-add-entry
         };
     }

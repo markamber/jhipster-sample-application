@@ -1,0 +1,16 @@
+import dayjs from 'dayjs';
+import { IOrderLineItem } from 'app/shared/model/order-line-item.model';
+import { IPurchaseOrderLineItem } from 'app/shared/model/purchase-order-line-item.model';
+
+export interface IReceivedItem {
+  id?: number;
+  note?: string | null;
+  location?: string | null;
+  assetIdSerial?: string | null;
+  assetIdMAC?: string | null;
+  receivedDate?: string | null;
+  fufill?: IOrderLineItem | null;
+  poLineItem?: IPurchaseOrderLineItem | null;
+}
+
+export const defaultValue: Readonly<IReceivedItem> = {};
