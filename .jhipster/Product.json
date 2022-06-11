@@ -1,0 +1,38 @@
+{
+  "applications": ["myApp"],
+  "changelogDate": "20220611040307",
+  "dto": "no",
+  "embedded": false,
+  "entityTableName": "product",
+  "fields": [
+    {
+      "fieldName": "modelName",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "type",
+      "fieldType": "ItemType",
+      "fieldValues": "SALE_ITEM,LABOR"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "Product",
+  "pagination": "no",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityName": "manufacture",
+      "otherEntityRelationshipName": "product",
+      "relationshipName": "manufacture",
+      "relationshipType": "many-to-one"
+    },
+    {
+      "otherEntityName": "purchaseOrderLineItem",
+      "otherEntityRelationshipName": "product",
+      "relationshipName": "purchaseOrderLineItem",
+      "relationshipType": "one-to-many"
+    }
+  ],
+  "service": "no"
+}

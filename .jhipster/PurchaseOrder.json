@@ -1,0 +1,35 @@
+{
+  "applications": ["myApp"],
+  "changelogDate": "20220611040309",
+  "dto": "no",
+  "embedded": false,
+  "entityTableName": "purchase_order",
+  "fields": [
+    {
+      "fieldName": "shipTo",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "notes",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "date",
+      "fieldType": "LocalDate"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "PurchaseOrder",
+  "pagination": "no",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityName": "purchaseOrderLineItem",
+      "otherEntityRelationshipName": "po",
+      "relationshipName": "poLineItems",
+      "relationshipType": "many-to-one"
+    }
+  ],
+  "service": "no"
+}

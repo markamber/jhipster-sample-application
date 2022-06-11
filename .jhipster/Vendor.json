@@ -1,0 +1,37 @@
+{
+  "applications": ["myApp"],
+  "changelogDate": "20220611040308",
+  "dto": "no",
+  "embedded": false,
+  "entityTableName": "vendor",
+  "fields": [
+    {
+      "fieldName": "legalEntity",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "nickname",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "billingAddress",
+      "fieldType": "String"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "Vendor",
+  "pagination": "no",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityName": "manufacture",
+      "otherEntityRelationshipName": "vendors",
+      "ownerSide": true,
+      "relationshipName": "manufactures",
+      "relationshipType": "many-to-many"
+    }
+  ],
+  "service": "no"
+}

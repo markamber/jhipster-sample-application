@@ -1,0 +1,32 @@
+{
+  "myApp": {
+    "orderLineItem": {
+      "home": {
+        "title": "Order Line Items",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Order Line Item",
+        "createOrEditLabel": "Create or edit a Order Line Item",
+        "notFound": "No Order Line Items found"
+      },
+      "created": "A new Order Line Item is created with identifier {{ param }}",
+      "updated": "A Order Line Item is updated with identifier {{ param }}",
+      "deleted": "A Order Line Item is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Order Line Item {{ id }}?"
+      },
+      "detail": {
+        "title": "Order Line Item"
+      },
+      "id": "ID",
+      "description": "Description",
+      "expectedCostUnit": "Expected Cost Unit",
+      "sellPriceUnit": "Sell Price Unit",
+      "numberUnits": "Number Units",
+      "room": "Room",
+      "system": "System",
+      "product": "Product",
+      "fufilledBy": "Fufilled By",
+      "project": "Project"
+    }
+  }
+}

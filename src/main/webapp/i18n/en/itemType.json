@@ -1,0 +1,9 @@
+{
+  "myApp": {
+    "ItemType": {
+      "null": "",
+      "SALE_ITEM": "SALE_ITEM",
+      "LABOR": "LABOR"
+    }
+  }
+}
