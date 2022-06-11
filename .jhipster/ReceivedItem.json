@@ -1,0 +1,62 @@
+{
+  "applications": ["myApp"],
+  "changelogDate": "20220611040311",
+  "dto": "no",
+  "embedded": false,
+  "entityTableName": "received_item",
+  "fields": [
+    {
+      "fieldName": "note",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "location",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "assetIdSerial",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "assetIdMAC",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "receivedDate",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldName": "tracked",
+      "fieldType": "Boolean"
+    },
+    {
+      "fieldName": "forInventory",
+      "fieldType": "Boolean"
+    },
+    {
+      "fieldName": "bundleQuantity",
+      "fieldType": "Long"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "ReceivedItem",
+  "pagination": "no",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityName": "orderLineItem",
+      "otherEntityRelationshipName": "fufilledBy",
+      "ownerSide": true,
+      "relationshipName": "fufill",
+      "relationshipType": "one-to-one"
+    },
+    {
+      "otherEntityName": "purchaseOrderLineItem",
+      "otherEntityRelationshipName": "receivedItems",
+      "relationshipName": "poLineItem",
+      "relationshipType": "many-to-one"
+    }
+  ],
+  "service": "no"
+}

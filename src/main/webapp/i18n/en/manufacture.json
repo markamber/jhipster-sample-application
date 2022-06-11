@@ -1,0 +1,26 @@
+{
+  "myApp": {
+    "manufacture": {
+      "home": {
+        "title": "Manufactures",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Manufacture",
+        "createOrEditLabel": "Create or edit a Manufacture",
+        "notFound": "No Manufactures found"
+      },
+      "created": "A new Manufacture is created with identifier {{ param }}",
+      "updated": "A Manufacture is updated with identifier {{ param }}",
+      "deleted": "A Manufacture is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Manufacture {{ id }}?"
+      },
+      "detail": {
+        "title": "Manufacture"
+      },
+      "id": "ID",
+      "name": "Name",
+      "product": "Product",
+      "vendors": "Vendors"
+    }
+  }
+}

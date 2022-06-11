@@ -1,0 +1,43 @@
+{
+  "applications": ["myApp"],
+  "changelogDate": "20220611040310",
+  "dto": "no",
+  "embedded": false,
+  "entityTableName": "purchase_order_line_item",
+  "fields": [
+    {
+      "fieldName": "note",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "estimatedShipDate",
+      "fieldType": "LocalDate"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "PurchaseOrderLineItem",
+  "pagination": "no",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityName": "receivedItem",
+      "otherEntityRelationshipName": "poLineItem",
+      "relationshipName": "receivedItems",
+      "relationshipType": "one-to-many"
+    },
+    {
+      "otherEntityName": "product",
+      "otherEntityRelationshipName": "purchaseOrderLineItem",
+      "relationshipName": "product",
+      "relationshipType": "many-to-one"
+    },
+    {
+      "otherEntityName": "purchaseOrder",
+      "otherEntityRelationshipName": "poLineItems",
+      "relationshipName": "po",
+      "relationshipType": "one-to-many"
+    }
+  ],
+  "service": "no"
+}

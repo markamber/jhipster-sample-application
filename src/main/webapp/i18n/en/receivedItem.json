@@ -1,0 +1,33 @@
+{
+  "myApp": {
+    "receivedItem": {
+      "home": {
+        "title": "Received Items",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Received Item",
+        "createOrEditLabel": "Create or edit a Received Item",
+        "notFound": "No Received Items found"
+      },
+      "created": "A new Received Item is created with identifier {{ param }}",
+      "updated": "A Received Item is updated with identifier {{ param }}",
+      "deleted": "A Received Item is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Received Item {{ id }}?"
+      },
+      "detail": {
+        "title": "Received Item"
+      },
+      "id": "ID",
+      "note": "Note",
+      "location": "Location",
+      "assetIdSerial": "Asset Id Serial",
+      "assetIdMAC": "Asset Id MAC",
+      "receivedDate": "Received Date",
+      "tracked": "Tracked",
+      "forInventory": "For Inventory",
+      "bundleQuantity": "Bundle Quantity",
+      "fufill": "Fufill",
+      "poLineItem": "Po Line Item"
+    }
+  }
+}

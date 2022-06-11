@@ -1,0 +1,27 @@
+{
+  "applications": ["myApp"],
+  "changelogDate": "20220611040304",
+  "dto": "no",
+  "embedded": false,
+  "entityTableName": "project",
+  "fields": [
+    {
+      "fieldName": "name",
+      "fieldType": "String"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "Project",
+  "pagination": "no",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityName": "orderLineItem",
+      "otherEntityRelationshipName": "project",
+      "relationshipName": "orderLineItem",
+      "relationshipType": "one-to-many"
+    }
+  ],
+  "service": "no"
+}
