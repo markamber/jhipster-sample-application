@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.6.xsd">
+    <!--
+        Added the constraints for entity Vendor.
+    -->
+    <changeSet id="20220611040039-2" author="jhipster">
+
+        <addForeignKeyConstraint baseColumnNames="vendor_id"
+                                 baseTableName="rel_vendor__manufactures"
+                                 constraintName="fk_rel_vendor__manufactures__vendor_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="vendor"/>
+
+        <addForeignKeyConstraint baseColumnNames="manufactures_id"
+                                 baseTableName="rel_vendor__manufactures"
+                                 constraintName="fk_rel_vendor__manufactures__manufactures_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="manufacture"/>
+    </changeSet>
+</databaseChangeLog>

@@ -1,0 +1,60 @@
+{
+  "applications": ["myApp"],
+  "changelogDate": "20220611040036",
+  "dto": "no",
+  "embedded": false,
+  "entityTableName": "order_line_item",
+  "fields": [
+    {
+      "fieldName": "description",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "expectedCostUnit",
+      "fieldType": "BigDecimal"
+    },
+    {
+      "fieldName": "sellPriceUnit",
+      "fieldType": "BigDecimal"
+    },
+    {
+      "fieldName": "numberUnits",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "room",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "system",
+      "fieldType": "String"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "OrderLineItem",
+  "pagination": "no",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityName": "product",
+      "otherEntityRelationshipName": "orderLineItem",
+      "relationshipName": "product",
+      "relationshipType": "many-to-one"
+    },
+    {
+      "otherEntityName": "receivedItem",
+      "otherEntityRelationshipName": "fufill",
+      "ownerSide": false,
+      "relationshipName": "fufilledBy",
+      "relationshipType": "one-to-one"
+    },
+    {
+      "otherEntityName": "project",
+      "otherEntityRelationshipName": "orderLineItem",
+      "relationshipName": "project",
+      "relationshipType": "many-to-one"
+    }
+  ],
+  "service": "no"
+}

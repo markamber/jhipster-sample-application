@@ -1,0 +1,101 @@
+
+
+application {
+  config {
+    baseName myApp,
+    applicationType monolith,
+    packageName com.markamber.testjhip,
+    authenticationType jwt,
+    prodDatabaseType postgresql,
+    clientFramework react
+  }
+  entities *
+}
+
+entity Project {
+	name String
+}
+
+entity OrderLineItem {
+	description String,
+    expectedCostUnit BigDecimal,
+    sellPriceUnit BigDecimal,
+    numberUnits Long,
+    room String,
+    system String
+}
+
+entity Manufacture {
+	name String
+}
+
+entity Product {
+    modelName String,
+    type ItemType,
+}
+
+relationship OneToMany {
+	Manufacture to Product{manufacture}
+}
+
+relationship ManyToMany {
+	Vendor{manufactures} to Manufacture{vendors}
+}
+
+enum ItemType {
+	SALE_ITEM,
+    LABOR
+}
+
+entity Vendor {
+	legalEntity String required,
+    nickname String,
+    billingAddress String,
+}
+
+entity PurchaseOrder {
+	shipTo String,
+    notes String,
+    date LocalDate
+}
+
+entity PurchaseOrderLineItem {
+	note String
+    estimatedShipDate LocalDate
+}
+
+relationship ManyToOne {
+	PurchaseOrder{poLineItems} to PurchaseOrderLineItem{po}
+}
+
+relationship ManyToOne {
+	OrderLineItem{product} to Product
+}
+
+entity ReceivedItem {
+	note String
+    location String,
+    assetIdSerial String,
+    assetIdMAC String,
+    receivedDate LocalDate,
+    tracked Boolean,
+    forInventory Boolean,
+    bundleQuantity Long,
+    
+}
+
+relationship OneToOne {
+	ReceivedItem{fufill} to OrderLineItem{fufilledBy}
+}
+
+relationship OneToMany {
+	 PurchaseOrderLineItem{receivedItems} to ReceivedItem{poLineItem}
+}
+
+relationship OneToMany {
+	Project to OrderLineItem{project}
+}
+
+relationship ManyToOne {
+	PurchaseOrderLineItem to Product
+}
