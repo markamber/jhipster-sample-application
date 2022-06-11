@@ -18,7 +18,7 @@ logging:
     ROOT: DEBUG
     tech.jhipster: DEBUG
     org.hibernate.SQL: DEBUG
-    co.markamber.testjhip: DEBUG
+    com.markamber.testjhip: DEBUG
 
 spring:
   devtools:
@@ -32,8 +32,8 @@ spring:
       indent-output: true
   datasource:
     type: com.zaxxer.hikari.HikariDataSource
-    url: jdbc:h2:file:./target/h2db/db/jhipstersampleapplication;DB_CLOSE_DELAY=-1
-    username: jhipsterSampleApplication
+    url: jdbc:h2:file:./target/h2db/db/myapp;DB_CLOSE_DELAY=-1
+    username: myApp
     password:
     hikari:
       poolName: Hikari

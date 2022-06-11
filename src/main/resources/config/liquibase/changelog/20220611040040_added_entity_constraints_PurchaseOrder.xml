@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.6.xsd">
+    <!--
+        Added the constraints for entity PurchaseOrder.
+    -->
+    <changeSet id="20220611040040-2" author="jhipster">
+
+        <addForeignKeyConstraint baseColumnNames="po_line_items_id"
+                                 baseTableName="purchase_order"
+                                 constraintName="fk_purchase_order__po_line_items_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="purchase_order_line_item"/>
+    </changeSet>
+</databaseChangeLog>

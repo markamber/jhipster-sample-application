@@ -1,0 +1,34 @@
+{
+  "applications": ["myApp"],
+  "changelogDate": "20220611040037",
+  "dto": "no",
+  "embedded": false,
+  "entityTableName": "manufacture",
+  "fields": [
+    {
+      "fieldName": "name",
+      "fieldType": "String"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "Manufacture",
+  "pagination": "no",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityName": "product",
+      "otherEntityRelationshipName": "manufacture",
+      "relationshipName": "product",
+      "relationshipType": "one-to-many"
+    },
+    {
+      "otherEntityName": "vendor",
+      "otherEntityRelationshipName": "manufactures",
+      "ownerSide": false,
+      "relationshipName": "vendors",
+      "relationshipType": "many-to-many"
+    }
+  ],
+  "service": "no"
+}

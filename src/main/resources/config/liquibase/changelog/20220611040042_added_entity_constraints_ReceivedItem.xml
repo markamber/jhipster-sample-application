@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.6.xsd">
+    <!--
+        Added the constraints for entity ReceivedItem.
+    -->
+    <changeSet id="20220611040042-2" author="jhipster">
+
+        <addForeignKeyConstraint baseColumnNames="fufill_id"
+                                 baseTableName="received_item"
+                                 constraintName="fk_received_item__fufill_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="order_line_item"/>
+
+        <addForeignKeyConstraint baseColumnNames="po_line_item_id"
+                                 baseTableName="received_item"
+                                 constraintName="fk_received_item__po_line_item_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="purchase_order_line_item"/>
+    </changeSet>
+</databaseChangeLog>
